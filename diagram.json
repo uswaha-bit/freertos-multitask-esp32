@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "author": "Uswah Alvi",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp32",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_fast",
+      "top": -30,
+      "left": 150,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_slow",
+      "top": 30,
+      "left": 150,
+      "attrs": { "color": "yellow" }
+    }
+  ],
+  "connections": [
+    [ "esp32:D2", "led_fast:A", "green", [] ],
+    [ "led_fast:C", "esp32:GND.1", "black", [] ],
+    [ "esp32:D4", "led_slow:A", "green", [] ],
+    [ "led_slow:C", "esp32:GND.2", "black", [] ]
+  ]
+}
